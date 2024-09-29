@@ -59,6 +59,11 @@
         img {
             display: block;
             margin: 0 auto;
+            max-width: 100%;
+        }
+        textarea, input {
+            box-sizing: border-box;
+            max-width: 100%;
         }
     </style>
 </head>
@@ -91,10 +96,16 @@
         <h2>Sign My Guestbook!</h2>
         <div class="guestbook">
             <form>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br><br>
-                <label for="comment">Comment:</label><br>
-                <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+                <div>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name">
+                    <br><br>
+                </div>
+                <div>
+                    <label for="comment">Comment:</label><br>
+                    <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+                    <br><br>
+                </div>
                 <input type="submit" value="Sign Guestbook">
             </form>
         </div>
