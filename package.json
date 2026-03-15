@@ -1,0 +1,17 @@
+{
+  "name": "gunthercox-com",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static personal site built with Tailwind CSS",
+  "scripts": {
+    "build": "tailwindcss -i ./src/styles.css -o ./assets/styles.css",
+    "build:prod": "tailwindcss -i ./src/styles.css -o ./assets/styles.css --minify",
+    "watch": "tailwindcss -i ./src/styles.css -o ./assets/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.2.0"
+  }
+}

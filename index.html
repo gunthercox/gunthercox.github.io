@@ -1,166 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1995 Personal Website</title>
-    <style>
-        body {
-            background-color: #c0c0c0;
-            color: black;
-            font-family: "Arial", sans-serif;
-            margin: 0px;
-            padding: 0px;
-        }
-        h1, h2 {
-            color: #000080;
-            text-align: center;
-        }
-        h1 {
-            font-size: 36px;
-        }
-        h2 {
-            font-size: 24px;
-        }
-        a {
-            color: #0000FF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            border: 2px solid #000000;
-            background-color: #FFFFFF;
-            padding: 20px;
-        }
-        .nav {
-            text-align: center;
-            margin: 10px 0;
-        }
-        .nav a {
-            margin: 0 15px;
-        }
-        hr {
-            border: 1px solid #000080;
-        }
-        li {
-            margin-bottom: 12px;
-        }
-        marquee {
-            background-color: #ffeb3b;
-            color: #000;
-            padding: 10px;
-        }
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-        }
-        textarea, input {
-            box-sizing: border-box;
-            max-width: 100%;
-        }
-        .text-center {
-            text-align: center;
-        }
-        .text-white {
-            color: white;
-        }
-        a.text-white {
-            text-decoration: none;
-        }
-        .footer {
-            background-color: #607e9b;
-            border-top-width: 0px;
-            margin-bottom: 15px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gunther Cox builds open source software, robotics projects, and premium photobooth experiences.">
+  <title>Gunther Cox | Open Source, Robotics, and Photobooth Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
-    <marquee>This site is best viewed with Netscape Navigator!</marquee>
+  <div class="page-wrap">
+    <header class="top-nav glass-nav px-4 py-3 sm:px-6">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <a href="/" class="brand-mark">Gunther Cox</a>
+        <nav class="flex flex-wrap gap-1">
+          <a href="#open-source" class="nav-link">Open Source</a>
+          <a href="#robotics" class="nav-link">Robotics</a>
+          <a href="#photobooth" class="nav-link">Photobooth</a>
+          <a href="#museum" class="nav-link">Museum</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-    <div class="container">
-        <h1>Welcome to My Homepage</h1>
-        <hr>
-        <h2>About</h2>
-        <p>
-            This page stands tribute to the style of web design circa 1995. I'll put something else here eventually, but for now this page is going to do its best to recreate the style of the World Wide Web prior to the year 2000.
-        </p>
-
-        <p>
-            Bellow are a number of links to other pages and projects where you can find my work (all of which will assuredly be more refined than this current page).
-        </p>
-
-        <h2>Links</h2>
-        <div class="nav">
-            <a href="https://blog.salvius.org">Robotics Blog</a> | 
-            <a href="https://github.com/gunthercox/">GitHub Profile</a> |
-            <a href="https://museum.gunthercox.com/"> Digital Museum</a>
+    <main class="mt-6 space-y-6">
+      <section class="hero-panel">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Independent Engineering and Design</p>
+            <h1 class="mt-3 text-4xl font-semibold sm:text-6xl">
+              Prototype and production systems across software, design, and hardware.
+            </h1>
+            <p class="mt-5 text-lg text-muted">
+              I build products and services that are useful, reliable, and understandable: open source software, hardware and software for events, and robotics research.
+            </p>
+            <div class="mt-7 flex flex-wrap items-center gap-3">
+              <a href="#projects" class="btn-primary">Explore Projects</a>
+              <a href="mailto:gunther@gunthercox.com" class="btn-secondary">Email</a>
+            </div>
+            <div class="mt-7 flex flex-wrap gap-2">
+              <span class="muted-chip">Open Source</span>
+              <span class="muted-chip">Photobooth</span>
+              <span class="muted-chip">Robotics</span>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-card">
+              <p class="eyebrow">Active Streams</p>
+              <div class="stat-grid">
+                <div>
+                  <p class="stat-label">Open Source</p>
+                  <p class="stat-value">50+ repos</p>
+                </div>
+                <div>
+                  <p class="stat-label">Events</p>
+                  <p class="stat-value">Exclusive rentals</p>
+                </div>
+                <div>
+                  <p class="stat-label">Robotics</p>
+                  <p class="stat-value">Project blog and resources</p>
+                </div>
+              </div>
+            </div>
+            <div class="signal-panel">
+              <p class="eyebrow">Signal</p>
+              <p class="signal-text">Designing with clarity, automating with care, documenting the build.</p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <br>
-        <hr>
+      <section id="projects" class="project-grid">
+        <article id="open-source" class="grid-card">
+          <p class="eyebrow">01</p>
+          <h2 class="mt-2 text-2xl font-semibold">Open Source Work</h2>
+          <p class="mt-3 text-muted">
+            Practical tooling and automation projects built for real workflows.
+          </p>
+          <div class="mt-5 grid gap-3">
+            <a href="https://docs.chatterbot.us/" class="grid-card block">
+              <h3 class="text-lg font-semibold">ChatterBot</h3>
+              <p class="mt-2 text-sm text-muted">
+                Documentation hub for the ChatterBot conversational AI toolkit.
+              </p>
+            </a>
+            <a href="https://gunthercox.com/ocr-service/" class="grid-card block">
+              <h3 class="text-lg font-semibold">OCR Service</h3>
+              <p class="mt-2 text-sm text-muted">
+                Document OCR platform with workflow-friendly APIs and tooling.
+              </p>
+            </a>
+            <a href="https://mathparse.chatterbot.us/" class="grid-card block">
+              <h3 class="text-lg font-semibold">mathparse</h3>
+              <p class="mt-2 text-sm text-muted">
+                Secure mathematical expression parser and evaluator for NLP applications.
+              </p>
+            </a>
+          </div>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <a href="https://github.com/gunthercox/" class="link-row">Explore Projects on GitHub</a>
+          </div>
+        </article>
 
-        <h2>Directory</h2>
-        <p>
-            Searching for something? The following are projects built by me:
+        <article id="photobooth" class="grid-card">
+          <p class="eyebrow">02</p>
+          <h2 class="mt-2 text-2xl font-semibold">Rentals & Services</h2>
+          <p class="mt-3 text-muted">
+            Affordable event experiences optimized for easy guest experiences.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <a href="https://photobooth.gunthercox.com/" class="link-row">Photobooth</a>
+            <a href="https://nimbusqr.com/" class="link-row">Nimbus QR</a>
+          </div>
+        </article>
+
+        <article id="robotics" class="grid-card">
+          <p class="eyebrow">03</p>
+          <h2 class="mt-2 text-2xl font-semibold">Robotics</h2>
+          <p class="mt-3 text-muted">
+            Experiments and logs where software, controls, and hardware meet.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <a href="https://blog.salvius.org" class="link-row">Robotics Blog</a>
+            <a href="https://salvius.org/" class="link-row">Salvius Homepage</a>
+          </div>
+        </article>
+      </section>
+
+      <section id="museum" class="feature-row">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <p class="eyebrow">Archive</p>
+            <h2 class="mt-2 text-3xl font-semibold">Digital Museum</h2>
+          </div>
+          <a href="https://museum.gunthercox.com/" class="btn-secondary">Visit Museum</a>
+        </div>
+        <p class="mt-3 max-w-3xl text-muted">
+          A curated archive of observations, art, and artifacts.
         </p>
-        <ul>
-            <li>
-                <a href="https://photobooth.gunthercox.com/">Photo Booth Rental</a>
-            </li>
-            <li>
-                <a href="https://nimbusqr.com/">QR Codes for Weddings</a>
-            </li>
-        </ul>
+        <div class="mt-6 banner-placeholder">
+          <span class="banner-placeholder__label">More coming soon!</span>
+        </div>
+      </section>
 
-        <br>
-        <hr>
-
-        <h2>Referrals</h2>
-        <p>
-            I've collected a number of referral links for various products that I use. Most of these offer some sort of bonus or reward for signing up with the link, so I'm listing them here in case anyone finds them useful:
+      <section id="publications" class="feature-row">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <p class="eyebrow">Publications</p>
+            <h2 class="mt-2 text-3xl font-semibold">Books and Research</h2>
+          </div>
+        </div>
+        <p class="mt-3 max-w-3xl text-muted">
+          A range of published works spanning from educational robotics resources to creative explorations in technology.
         </p>
-        <ul>
-            <li>
-                <!-- NOTE: "After your referral has been active for 30 days, you'll both get $60 Fi credit. Terms and conditions apply." -->
-                <a href="https://g.co/fi/r/NW26WW">
-                    Google Fi Wireless
-                </a>
-            </li>
-            <li>
-                <a href="https://join.robinhood.com/gunthec1">
-                    Robinhood (Stock Trading & Investing App)
-                </a>
-            </li>
-            <li>
-                <!-- NOTE: "We'll give you a $25 gift card for every new customer who files their 2023 taxes with us. The more friends you refer, the more you'll earn—up to $500 in gift cards."" -->
-                <a href="https://turbotax.intuit.com/referral/?cid=soc_frb_invtfr_em-diy-ty23">
-                    TurboTax
-                </a>
-            </li>
-            <li>
-                <!-- NOTE: "Everyone you refer gets $200 in credit over 60 days. Once they’ve spent $25 with us, you'll get $25. There is no limit to the amount of credit you can earn through referrals."" -->
-                <a href="https://m.do.co/c/c9a695f20505">
-                    Digital Ocean (Cloud solutions for software development)
-                </a>
-            </li>
-        </ul>
+        <div class="mt-6 grid gap-3 sm:grid-cols-2">
+          <article class="grid-card">
+            <h3 class="text-lg font-semibold">The Robot Science Coloring Book</h3>
+            <p class="mt-2 text-sm text-muted">
+              Over 30 pages based on the robotic designs and sketches of Salvius. Page themes cover concepts around where the raw materials used to build robots originate from, how various components are made, as well as various types of electronic components and what they are used for.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <a href="https://amzn.to/41K298G" class="link-row">Available on Amazon</a>
+            </div>
+          </article>
+          <article class="grid-card">
+            <h3 class="text-lg font-semibold">Stand-up for Robots</h3>
+            <p class="mt-2 text-sm text-muted">
+              In a world powered by algorithms and illuminated by LEDs, one robot stands before the microphone, searching not for power, but for laughter.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <a href="https://amzn.to/45ielzq" class="link-row">Available on Amazon</a>
+            </div>
+          </article>
+        </div>
+      </section>
 
-        <hr>
-        <br>
+      <section id="contact" class="contact-panel">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <p class="eyebrow">Social</p>
+            <h2 class="mt-2 text-3xl font-semibold">Network Links</h2>
+          </div>
+        </div>
+        <p class="mt-3 max-w-3xl text-muted">
+          Follow ongoing work, releases, and project updates across the network.
+        </p>
+        <div class="mt-6 social-grid">
+          <a href="https://www.linkedin.com/in/gunthercox/" class="social-link">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            LinkedIn
+          </a>
+          <a href="https://bsky.app/profile/gunthercox.com" class="social-link">
+            <i class="fa-brands fa-bluesky" aria-hidden="true"></i>
+            Bluesky
+          </a>
+          <a href="https://github.com/gunthercox/" class="social-link">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            GitHub
+          </a>
+          <a href="https://x.com/gunthercox" class="social-link">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            Twitter
+          </a>
+        </div>
+      </section>
+    </main>
 
-        <a title="[[:en:User:{{{1}}}|{{{1}}}]] at the English-language Wikipedia, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Animated_spinning_globe_of_the_world.gif"><img width="32" alt="Animated spinning globe of the world" src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Animated_spinning_globe_of_the_world.gif?20170808145308"></a>
-        <p><strong>Last updated:</strong> February 28, 2025</p>
-    </div>
-    <div class="container footer text-center">
-        <span>&copy; Copyright 2025 Gunther Cox</span>
-        <span> | </span>
-        <span><a href="/privacy/" class="text-white">Privacy Policy</a></span>
-    </div>
+    <footer class="mt-6 px-1 py-5 text-sm text-muted">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <span>&copy; 2026 Gunther Cox</span>
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="/privacy/" class="footer-link">Privacy Policy</a>
+          <a href="/sitemap.xml" class="footer-link">Sitemap</a>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

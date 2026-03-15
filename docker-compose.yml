@@ -1,0 +1,26 @@
+services:
+  tailwind:
+    build: .
+    working_dir: /site
+    command: npm run watch
+    volumes:
+      - ./:/site
+      - node_modules:/site/node_modules
+
+  tailwind-build:
+    build: .
+    working_dir: /site
+    command: npm run build:prod
+    volumes:
+      - ./:/site
+      - node_modules:/site/node_modules
+
+  web:
+    image: nginx:alpine
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+
+volumes:
+  node_modules:
