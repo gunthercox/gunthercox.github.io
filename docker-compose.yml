@@ -7,14 +7,6 @@ services:
       - ./:/site
       - node_modules:/site/node_modules
 
-  tailwind-build:
-    build: .
-    working_dir: /site
-    command: npm run build:prod
-    volumes:
-      - ./:/site
-      - node_modules:/site/node_modules
-
   web:
     image: nginx:alpine
     ports:
