@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ description or 'Gunther Cox builds open source software, robotics projects, and premium photobooth experiences.' }}">
+  <title>{{ title or 'Gunther Cox | Open Source, Robotics, and Photobooth Projects' }}</title>
+
+  {# Canonical URL #}
+  {% if page.url %}
+  <link rel="canonical" href="https://gunthercox.com{{ page.url }}">
+  {% endif %}
+
+  {# Open Graph #}
+  <meta property="og:type" content="{{ ogType or 'website' }}">
+  <meta property="og:title" content="{{ title or 'Gunther Cox' }}">
+  <meta property="og:description" content="{{ description or 'Gunther Cox builds open source software, robotics projects, and premium photobooth experiences.' }}">
+  <meta property="og:url" content="https://gunthercox.com{{ page.url }}">
+  <meta property="og:site_name" content="Gunther Cox">
+
+  {# RSS feed discovery #}
+  <link rel="alternate" type="application/atom+xml" title="Gunther Cox — Blog Feed" href="/feed.xml">
+
+  {# Fonts #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  {# Styles #}
+  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  {# WebSite JSON-LD for homepage #}
+  {% if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Gunther Cox",
+    "url": "https://gunthercox.com",
+    "description": "Gunther Cox builds open source software, robotics projects, and premium photobooth experiences.",
+    "author": {
+      "@type": "Person",
+      "name": "Gunther Cox",
+      "url": "https://gunthercox.com"
+    }
+  }
+  </script>
+  {% endif %}
+</head>
+<body>
+  {{ content | safe }}
+</body>
+</html>

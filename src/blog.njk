@@ -1,0 +1,43 @@
+---
+layout: layouts/page.njk
+title: "Blog | Gunther Cox"
+description: "Writing on open source software, robotics, hardware, and engineering."
+permalink: /blog/index.html
+---
+<section class="feature-row">
+  <div>
+    <p class="eyebrow">Writing</p>
+    <h1 class="mt-2 text-3xl font-semibold">Blog</h1>
+    <p class="mt-3 max-w-3xl text-muted">Writing on open source software, robotics, hardware, and engineering.</p>
+  </div>
+</section>
+
+{% if collections.posts.length %}
+<section class="space-y-4">
+  {% for post in collections.posts %}
+  <article class="grid-card">
+    <p class="eyebrow">{{ post.date | readableDate }}</p>
+    <h2 class="mt-2 text-xl font-semibold">
+      <a href="{{ post.url }}" class="hover:opacity-80 transition-opacity">{{ post.data.title }}</a>
+    </h2>
+    {% if post.data.description %}
+    <p class="mt-2 text-muted">{{ post.data.description }}</p>
+    {% endif %}
+    {% if post.data.tags %}
+    <div class="mt-3 flex flex-wrap gap-2">
+      {% for tag in post.data.tags %}
+      <a href="/blog/tags/{{ tag | slug }}/" class="muted-chip text-sm hover:opacity-80 transition-opacity">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="mt-4">
+      <a href="{{ post.url }}" class="link-row">Read post</a>
+    </div>
+  </article>
+  {% endfor %}
+</section>
+{% else %}
+<div class="grid-card text-muted">
+  <p>No posts yet. Check back soon.</p>
+</div>
+{% endif %}

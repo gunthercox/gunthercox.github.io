@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+---
+<div class="page-wrap">
+  <header class="top-nav glass-nav px-4 py-3 sm:px-6">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <a href="/" class="brand-mark">Gunther Cox</a>
+      <nav class="flex flex-wrap gap-1">
+        <a href="/#open-source" class="nav-link">Open Source</a>
+        <a href="/#robotics" class="nav-link">Robotics</a>
+        <a href="/#photobooth" class="nav-link">Photobooth</a>
+        <a href="/#museum" class="nav-link">Museum</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mt-6 space-y-6">
+    {{ content | safe }}
+  </main>
+
+  <footer class="mt-6 px-1 py-5 text-sm text-muted">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <span>&copy; 2026 Gunther Cox</span>
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="/privacy/" class="footer-link">Privacy Policy</a>
+        <a href="/sitemap.xml" class="footer-link">Sitemap</a>
+        <a href="/feed.xml" class="footer-link">RSS</a>
+      </div>
+    </div>
+  </footer>
+</div>

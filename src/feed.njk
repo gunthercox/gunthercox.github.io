@@ -1,0 +1,27 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Gunther Cox</title>
+  <subtitle>Writing on open source software, robotics, hardware, and engineering.</subtitle>
+  <link href="https://gunthercox.com/feed.xml" rel="self"/>
+  <link href="https://gunthercox.com/"/>
+  <updated>{{ collections.posts | first | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>https://gunthercox.com/</id>
+  <author>
+    <name>Gunther Cox</name>
+    <email>gunther@gunthercox.com</email>
+  </author>
+  {% for post in collections.posts | head(20) %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="https://gunthercox.com{{ post.url }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>https://gunthercox.com{{ post.url }}</id>
+    {% if post.data.description %}<summary>{{ post.data.description }}</summary>{% endif %}
+    <content type="html"><![CDATA[{{ post.templateContent | safe }}]]></content>
+  </entry>
+  {% endfor %}
+</feed>

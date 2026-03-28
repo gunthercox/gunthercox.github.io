@@ -1,0 +1,81 @@
+---
+layout: layouts/base.njk
+ogType: article
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ title }}",
+  "description": "{{ description }}",
+  "datePublished": "{{ date | isoDate }}",
+  "dateModified": "{{ date | isoDate }}",
+  "url": "https://gunthercox.com{{ page.url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Gunther Cox",
+    "url": "https://gunthercox.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Gunther Cox",
+    "url": "https://gunthercox.com"
+  }
+}
+</script>
+
+<div class="page-wrap">
+  <header class="top-nav glass-nav px-4 py-3 sm:px-6">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <a href="/" class="brand-mark">Gunther Cox</a>
+      <nav class="flex flex-wrap gap-1">
+        <a href="/#open-source" class="nav-link">Open Source</a>
+        <a href="/#robotics" class="nav-link">Robotics</a>
+        <a href="/#photobooth" class="nav-link">Photobooth</a>
+        <a href="/#museum" class="nav-link">Museum</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mt-6">
+    <article class="grid-card mx-auto max-w-3xl">
+      <div class="mb-6">
+        <a href="/blog/" class="footer-link text-sm">&larr; Back to Blog</a>
+      </div>
+
+      <p class="eyebrow">{{ date | readableDate }}</p>
+      <h1 class="mt-2 text-3xl font-semibold sm:text-4xl">{{ title }}</h1>
+
+      {% if description %}
+      <p class="mt-4 text-lg text-muted">{{ description }}</p>
+      {% endif %}
+
+      {% if tags %}
+      <div class="mt-4 flex flex-wrap gap-2">
+        {% for tag in tags %}
+        <a href="/blog/tags/{{ tag | slug }}/" class="muted-chip text-sm hover:opacity-80 transition-opacity">{{ tag }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <hr class="my-6 border-surface-border opacity-30">
+
+      <div class="prose prose-invert max-w-none mt-6 space-y-4 text-muted leading-relaxed">
+        {{ content | safe }}
+      </div>
+    </article>
+  </main>
+
+  <footer class="mt-6 px-1 py-5 text-sm text-muted">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <span>&copy; 2026 Gunther Cox</span>
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="/privacy/" class="footer-link">Privacy Policy</a>
+        <a href="/sitemap.xml" class="footer-link">Sitemap</a>
+        <a href="/feed.xml" class="footer-link">RSS</a>
+      </div>
+    </div>
+  </footer>
+</div>

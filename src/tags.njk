@@ -1,0 +1,37 @@
+---
+layout: layouts/page.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+permalink: /blog/tags/{{ tag | slug }}/index.html
+eleventyComputed:
+  title: "Posts tagged &ldquo;{{ tag }}&rdquo; | Gunther Cox"
+  description: "All posts tagged {{ tag }} on gunthercox.com."
+---
+<section class="feature-row">
+  <div>
+    <p class="eyebrow"><a href="/blog/" class="footer-link">&larr; All posts</a></p>
+    <h1 class="mt-2 text-3xl font-semibold">Tagged: {{ tag }}</h1>
+  </div>
+</section>
+
+<section class="space-y-4">
+  {% set taggedPosts = collections.posts | selectattr("data.tags") %}
+  {% for post in collections.posts %}
+    {% if tag in post.data.tags %}
+    <article class="grid-card">
+      <p class="eyebrow">{{ post.date | readableDate }}</p>
+      <h2 class="mt-2 text-xl font-semibold">
+        <a href="{{ post.url }}" class="hover:opacity-80 transition-opacity">{{ post.data.title }}</a>
+      </h2>
+      {% if post.data.description %}
+      <p class="mt-2 text-muted">{{ post.data.description }}</p>
+      {% endif %}
+      <div class="mt-4">
+        <a href="{{ post.url }}" class="link-row">Read post</a>
+      </div>
+    </article>
+    {% endif %}
+  {% endfor %}
+</section>
