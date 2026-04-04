@@ -7,6 +7,8 @@ tags:
   - engineering
 ---
 
+![Software consulting session](/assets/images/software-consulting.png)
+
 Something interesting has happened over the last couple of years: the barrier to shipping working software has dropped dramatically. AI coding tools have made it genuinely possible for someone with limited engineering experience to build and deploy a functional app. That's not hype, I've seen it firsthand.
 
 But "working" and "production-ready" are different things, and the gap between them isn't always obvious until something goes wrong.
