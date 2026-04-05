@@ -2,7 +2,10 @@
 layout: layouts/page.njk
 title: "Blog | Gunther Cox"
 description: "Writing on open source software, robotics, hardware, and engineering."
-permalink: /blog/index.html
+pagination:
+  data: collections.posts
+  size: 7
+permalink: "/blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 <section class="feature-row">
   <div>
@@ -12,9 +15,9 @@ permalink: /blog/index.html
   </div>
 </section>
 
-{% if collections.posts.length %}
+{% if pagination.items.length %}
 <section class="space-y-4">
-  {% for post in collections.posts %}
+  {% for post in pagination.items %}
   <article class="grid-card">
     <p class="eyebrow">{{ post.date | readableDate }}</p>
     <h2 class="mt-2 text-xl font-semibold">
@@ -40,4 +43,20 @@ permalink: /blog/index.html
 <div class="grid-card text-muted">
   <p>No posts yet. Check back soon.</p>
 </div>
+{% endif %}
+
+{% if pagination.href.previous or pagination.href.next %}
+<nav class="flex items-center justify-between mt-6">
+  <div>
+    {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}" class="link-row">&larr; Newer posts</a>
+    {% endif %}
+  </div>
+  <p class="text-muted text-sm">Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</p>
+  <div>
+    {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}" class="link-row">Older posts &rarr;</a>
+    {% endif %}
+  </div>
+</nav>
 {% endif %}
