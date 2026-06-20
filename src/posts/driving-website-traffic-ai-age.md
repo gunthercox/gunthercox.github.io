@@ -3,6 +3,7 @@ layout: layouts/post.njk
 title: "The Complete Guide to Driving Website Traffic in the Age of AI (2026 Edition)"
 description: "Traditional search is declining as AI chatbots and Google AI Overviews deliver zero-click answers. Learn how to adapt with Generative Engine Optimization (GEO) - structuring content for AI citation, maximizing information gain, building entity authority, and diversifying traffic beyond organic search."
 date: 2026-06-19
+ogImage: /assets/images/posts/driving-website-traffic-ai-age/mastering_2026_ai_search_strategy.png
 tags:
   - SEO
   - AI

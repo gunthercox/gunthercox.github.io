@@ -17,6 +17,10 @@
   <meta property="og:description" content="{{ description or 'Gunther Cox builds open source software, robotics projects, and premium photobooth experiences.' }}">
   <meta property="og:url" content="https://gunthercox.com{{ page.url }}">
   <meta property="og:site_name" content="Gunther Cox">
+  {% if ogImage %}
+  <meta property="og:image" content="https://gunthercox.com{{ ogImage }}">
+  <meta name="pinterest:media" content="https://gunthercox.com{{ ogImage }}">
+  {% endif %}
 
   {# RSS feed discovery #}
   <link rel="alternate" type="application/atom+xml" title="Gunther Cox — Blog Feed" href="/feed.xml">
